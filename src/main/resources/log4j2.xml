@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="OFF">
+    <Appenders>
+<!--        <File name="Logs" fileName="logs/MultiThreadingLog.log">-->
+<!--            <PatternLayout pattern="%d %p %c{-5} [%t] %m%n" />-->
+<!--        </File>-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss} [%r] [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+<!--            <AppenderRef ref="Logs"/>-->
+        </Root>
+    </Loggers>
+</Configuration>

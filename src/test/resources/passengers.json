@@ -1,0 +1,132 @@
+{
+  "passengers": [
+    {
+      "name": "Valera",
+      "location": {
+        "coordinateX": 5,
+        "coordinateY": 14
+      },
+      "destination": {
+        "coordinateX": 94,
+        "coordinateY": 42
+      },
+      "isArrived": false
+    },
+    {
+      "name": "Anton",
+      "location": {
+        "coordinateX": 15,
+        "coordinateY": 33
+      },
+      "destination": {
+        "coordinateX": 62,
+        "coordinateY": 35
+      },
+      "isArrived": false
+    },
+    {
+      "name": "Anna",
+      "location": {
+        "coordinateX": 64,
+        "coordinateY": 25
+      },
+      "destination": {
+        "coordinateX": 36,
+        "coordinateY": 84
+      },
+      "isArrived": false
+    },
+    {
+      "name": "Olga",
+      "location": {
+        "coordinateX": 19,
+        "coordinateY": 42
+      },
+      "destination": {
+        "coordinateX": 41,
+        "coordinateY": 22
+      },
+      "isArrived": false
+    },
+    {
+      "name": "Ho Shi Min",
+      "location": {
+        "coordinateX": 321,
+        "coordinateY": 153
+      },
+      "destination": {
+        "coordinateX": 254,
+        "coordinateY": 194
+      },
+      "isArrived": false
+    },
+    {
+      "name": "Indira",
+      "location": {
+        "coordinateX": 564,
+        "coordinateY": 135
+      },
+      "destination": {
+        "coordinateX": 0,
+        "coordinateY": 1020
+      },
+      "isArrived": false
+    },{
+      "name": "Monika",
+      "location": {
+        "coordinateX": 1035,
+        "coordinateY": 324
+      },
+      "destination": {
+        "coordinateX": 845,
+        "coordinateY": 562
+      },
+      "isArrived": false
+    },{
+      "name": "Kim",
+      "location": {
+        "coordinateX": 349,
+        "coordinateY": 642
+      },
+      "destination": {
+        "coordinateX": 542,
+        "coordinateY": 945
+      },
+      "isArrived": false
+    },{
+      "name": "Adam",
+      "location": {
+        "coordinateX": 785,
+        "coordinateY": 124
+      },
+      "destination": {
+        "coordinateX": 564,
+        "coordinateY": 1046
+      },
+      "isArrived": false
+    },{
+      "name": "Scarlet",
+      "location": {
+        "coordinateX": 824,
+        "coordinateY": 635
+      },
+      "destination": {
+        "coordinateX": 183,
+        "coordinateY": 519
+      },
+      "isArrived": false
+    },{
+      "name": "Tanya",
+      "location": {
+        "coordinateX": 344,
+        "coordinateY": 615
+      },
+      "destination": {
+        "coordinateX": 765,
+        "coordinateY": 246
+      },
+      "isArrived": false
+    }
+  ]
+}
+
