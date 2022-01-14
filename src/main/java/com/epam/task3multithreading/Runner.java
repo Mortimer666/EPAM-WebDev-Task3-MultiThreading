@@ -10,25 +10,30 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 public class Runner {
     private static final Logger LOGGER = LogManager.getLogger(Runner.class);
+    private static final String PATH = "src/test/resources/passengers.json";
 
-    public static void main(String[] args) throws ParserException, InterruptedException {
-        Parser parser = new ParserJSONImpl();
-        PassengersStore passengers = parser.parse("src/test/resources/passengers.json");
-        for (Passenger passenger : passengers.getPassengers()) {
-            LOGGER.info(passenger.getIsArrived());
+    public static void main(String[] args) {
+        try {
+            process();
+        } catch (ParserException exception) {
+            LOGGER.error(exception.getMessage(), exception.fillInStackTrace());
         }
+
+    }
+
+    private static void process() throws ParserException {
+        Parser parser = new ParserJSONImpl();
+        PassengersStore passengers = parser.parse(PATH);
         ExecutorService executorService = Executors.newFixedThreadPool(passengers.getPassengers().size());
         for (Passenger passenger : passengers.getPassengers()) {
-            executorService.submit(passenger);
+            executorService.execute(passenger);
         }
         executorService.shutdown();
-        TimeUnit.MILLISECONDS.sleep(500);
-        for (Passenger passenger : passengers.getPassengers()) {
-            LOGGER.info(passenger.getIsArrived());
+        while(!executorService.isTerminated()){
+//            Waiting while our threads completely stops.
         }
     }
 }

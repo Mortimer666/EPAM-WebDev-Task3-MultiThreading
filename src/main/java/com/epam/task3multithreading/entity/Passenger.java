@@ -13,19 +13,11 @@ public class Passenger implements Runnable {
     @JsonProperty
     private String name;
     @JsonProperty
-    private DisLocation location;
-    @JsonProperty
-    private DisLocation destination;
-    @JsonProperty
     private boolean isArrived;
     private final TaxiStation taxiStation = TaxiStation.getInstance();
 
     public Passenger() {
         //  Constructor is empty because objects parsing and creating from JSON
-    }
-
-    public DisLocation getLocation() {
-        return location;
     }
 
     public String getName() {
@@ -36,25 +28,19 @@ public class Passenger implements Runnable {
         return isArrived;
     }
 
-    public DisLocation getDestination() {
-        return destination;
-    }
-
-    public void setArrived(boolean arrived) {
-        isArrived = arrived;
+    void changeIsArrived() {
+        isArrived = true;
     }
 
     @Override
     public void run() {
-        LOGGER.info("Start thread");
         try {
             Taxi taxi = taxiStation.orderTaxi();
-            LOGGER.info("Try to transfer passenger");
             taxi.transfer(this);
-            LOGGER.info("Passenger transferred");
             taxiStation.releaseTaxi(taxi);
+            LOGGER.info("Taxi is free");
         } catch (TaxiStationException e) {
-            LOGGER.error(e.getMessage());
+            LOGGER.error(e.getMessage(), e.fillInStackTrace());
         }
     }
 
@@ -67,18 +53,16 @@ public class Passenger implements Runnable {
             return false;
         }
         Passenger passenger = (Passenger) object;
-        return isArrived == passenger.isArrived && Objects.equals(name, passenger.name)
-                && Objects.equals(location, passenger.location) && Objects.equals(destination, passenger.destination);
+        return isArrived == passenger.isArrived && Objects.equals(name, passenger.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, location, destination, isArrived);
+        return Objects.hash(name, isArrived);
     }
 
     @Override
     public String toString() {
-        return "\nPassenger: " + "name = '" + name + "', " + "Passenger" + location + ", "
-                + "Passenger destination:" + destination + ", isArrived = " + isArrived;
+        return "\nPassenger: " + "name = '" + name + "', " + "isArrived = " + isArrived;
     }
 }
