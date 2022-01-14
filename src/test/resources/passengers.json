@@ -1,0 +1,49 @@
+{
+  "passengers": [
+    {
+      "name": "Valera",
+      "isArrived": false
+    },
+    {
+      "name": "Anton",
+      "isArrived": false
+    },
+    {
+      "name": "Anna",
+      "isArrived": false
+    },
+    {
+      "name": "Olga",
+      "isArrived": false
+    },
+    {
+      "name": "Ho Shi Min",
+      "isArrived": false
+    },
+    {
+      "name": "Indira",
+      "isArrived": false
+    },
+    {
+      "name": "Monika",
+      "isArrived": false
+    },
+    {
+      "name": "Kim",
+      "isArrived": false
+    },
+    {
+      "name": "Adam",
+      "isArrived": false
+    },
+    {
+      "name": "Scarlet",
+      "isArrived": false
+    },
+    {
+      "name": "Tanya",
+      "isArrived": false
+    }
+  ]
+}
+
