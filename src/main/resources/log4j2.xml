@@ -2,7 +2,7 @@
 <Configuration status="OFF">
     <Appenders>
         <File name="Logs" fileName="logs/MultiThreadingLog.log">
-            <PatternLayout pattern="%d %p %c{-5} [%t] %m%n" />
+            <PatternLayout pattern="%d %p %c{-5} [%t] %m%n"/>
         </File>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss} [%r] [%t] %-5level %logger{36} - %msg%n"/>

@@ -32,7 +32,7 @@ public class Runner {
             executorService.execute(passenger);
         }
         executorService.shutdown();
-        while(!executorService.isTerminated()){
+        while (!executorService.isTerminated()) {
 //            Waiting while our threads completely stops.
         }
     }

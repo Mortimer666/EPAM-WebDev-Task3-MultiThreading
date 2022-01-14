@@ -36,7 +36,7 @@ public class TaxiStation {
         if (localInstance == null) {
             LOCK.lock();
             try {
-            localInstance = instance;
+                localInstance = instance;
                 if (localInstance == null) {
                     instance = localInstance = new TaxiStation();
                 }
